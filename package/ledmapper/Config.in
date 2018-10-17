@@ -1,0 +1,31 @@
+config BR2_PACKAGE_LEDMAPPER
+	bool "LedMapper"
+	select BR2_PACKAGE_RPI_FIRMWARE
+	help
+	  Embedded Raspberry PI 3 Linux distribution for light control
+
+if BR2_PACKAGE_LEDMAPPER
+
+config BR2_PACKAGE_LEDMAPPER_X11_NOCURSOR
+	bool "Hide X11 cursor"
+	help
+	  Hide the mouse cursor in X11
+
+config BR2_PACKAGE_LEDMAPPER_CONFIG_DTOVERLAY
+	string "Device tree overlays"
+	help
+	  Device tree overlays that will be added to config.xml
+
+config BR2_PACKAGE_LEDMAPPER_CONFIG_DTPARAM
+	string "Device tree params"
+	help
+	  Device tree parameters that will be added to config.xml
+
+config BR2_PACKAGE_LEDMAPPER_BOOT_SPLASH
+	string "Path to ASCII PPM splash image"
+	default "package/ledmapper/logo_linux_clut224.ppm"
+	help
+	  The path towards an ASCII PPM image that will be compiled into the
+	  Linux kernel to use as a boot splash screen
+
+endif # BR2_PACKAGE_LEDMAPPER
