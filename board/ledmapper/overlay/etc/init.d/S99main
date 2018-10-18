@@ -1,11 +1,11 @@
 #!/bin/sh
 
 start() {
-	DISPLAY=:0 erpiam-main &> /dev/null &
+	lmListener &> /dev/null &
 }
 
 stop() {
-	killall -9 erpiam-main
+	killall -9 lmListener
 }
 
 case "$1" in
