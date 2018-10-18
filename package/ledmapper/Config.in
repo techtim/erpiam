@@ -1,6 +1,9 @@
 config BR2_PACKAGE_LEDMAPPER
 	bool "LedMapper"
 	select BR2_PACKAGE_RPI_FIRMWARE
+	select BR2_PACKAGE_WIRINGPI
+	select BR2_PACKAGE_DHCP
+	depends on BR2_INSTALL_LIBSTDCPP
 	help
 	  Embedded Raspberry PI 3 Linux distribution for light control
 
