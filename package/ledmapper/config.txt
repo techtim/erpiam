@@ -28,3 +28,5 @@ hdmi_mode=3    480p   60 Hz  H
 
 hdmi_force_hotplug=1
 hdmi_force_edid_audio=1
+
+dtparam=spi=on
