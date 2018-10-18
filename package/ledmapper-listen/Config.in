@@ -5,4 +5,4 @@ config BR2_PACKAGE_LEDMAPPER_LISTEN
         depends on BR2_TOOLCHAIN_HAS_THREADS
         depends on BR2_TOOLCHAIN_USES_GLIBC
         help
-          Erpiam blueprint main UI based on JUCE 
+          LedMapper cpp UDP listener and frame streamer 
